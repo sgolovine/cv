@@ -1,0 +1,219 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sgolovine/cv/main/schema.json",
+  "basics": {
+    "name": "Sunny Golovine",
+    "label": "Lead Software Engineer",
+    "image": "",
+    "email": "sunny@glvn.co",
+    "phone": "(678) 646-2358",
+    "url": "http://sunnygolovine.com",
+    "summary": "Senior Software Engineer focused on building Web and Mobile applications using React. Experience designing, building, testing and deploying numerous applications in a variety of environments from small companies to large enterprises. On the side I have built many applications in React and other JS frameworks ranging from browser extensions, blogs, websites, web applications and mobile applications. My goal in building any application is to create a delightful experience for both the user and the developer.",
+    "location": {
+      "address": "1235 S Birch St",
+      "postalCode": "CO 80412",
+      "city": "Denver",
+      "countryCode": "US",
+      "region": "Colorado"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "sgolovine",
+        "url": "https://github.com/sgolovine"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Ascendum Solutions",
+      "location": "Cincinnati, OH (Remote)",
+      "position": "Lead Software Engineer",
+      "url": "http://ascendum.com",
+      "startDate": "2020-04-01",
+      "current": true,
+      "summary": "Led a number of projects for small and large clients. Built robust codebases that allowed developers to move quickly inside of, implementing new features and delivering to clients ahead of schedule",
+      "highlights": [
+        "Lead developer for Anthem Healthcare, one of Ascendum's largest clients",
+        "Helped develop a greenfield React application where members and caregivers can share personal stories and join online communities that supports their medical condition.",
+        "Provided assistance to a project developing a dashboard in React, helping build the charts and graphs using Recharts and AgGrid",
+        "Provide leadership on several key projects with Anthem Healthcare, acting as a liaison between client's leadership, technical teams and our team. Managing internal bureaucratic processes so that developers could focus on writing code and delivering features",
+        "Developed standards for greenfielding new React applications, providing guidance and best practices on setting up frontend codebases so teams could move faster in writing code with minimal bugs."
+      ]
+    },
+    {
+      "name": "Cox Automotive",
+      "location": "Atlanta, GA",
+      "position": "Software Engineer",
+      "url": "https://coxautoinc.com",
+      "startDate": "2018-06-01",
+      "endDate": "2020-04-01",
+      "summary": "Software Engineer focused on building full stack web and mobile applications using React and serverless.",
+      "highlights": [
+        "Developed Cox Automotive Field Services, greenfield React Native app allowing field employees to inspect vehicles coming in for auction. Allows more accurate vehicle disclosures giving distinct business advantage over competitors",
+        "Developed an administrative panel in React for Cox Automotive Field Services, allowing supervisors in the field to remotely enable and disable features.",
+        "Went on several ride-along's with field workers, helping identify bugs that were hard to reproduce in the lab and identified ways to improve app workflow",
+        "Worked with company leadership and legal to resolve issues related to App Store approval process and worked through a number of rejections",
+        "Leveraged existing knowledge and company ecosystem to develop several API's and internal company applications that automated tedious processes to make the organization more efficient in areas including: allow the editing of disclosures on the fly, streamline new employee onboarding and gain greater insight into vehicle locations."
+      ]
+    },
+    {
+      "name": "OnQ",
+      "location": "Atlanta, GA",
+      "position": "Jr. Software Engineer",
+      "startDate": "2017-06-01",
+      "endDate": "2018-05-01",
+      "summary": "First job out of college. Helped the team build the OnQ learning platform using React",
+      "highlights": [
+        "Helped develop OnQ's core web platform in React. The platform was built as a React Webpack app that used Semantic UI",
+        "Learned about many of React's core concepts and best practices",
+        "Worked with Design, QA and leadership to suggest a number of UX changes that helped improve user experience.",
+        "Forked and modified a number of NPM packages that let our teams leverage functionality that was previously unavailable"
+      ]
+    },
+    {
+      "name": "Progressive Insurance",
+      "location": "Colorado Springs, CO",
+      "position": "Intern",
+      "startDate": "2016-01-06",
+      "endDate": "2016-01-07",
+      "summary": "Summer intern for Progressive Insurance.",
+      "highlights": [
+        "Supported JCL applications on the IBM z/OS architecture in first rotation",
+        "Supported virtualized applications and desktops running inside Progressive's datacenter in second rotation",
+        "Developed a template for Progressive's internal sharepoint instance that allowed teams to quickly put together pages."
+      ]
+    },
+    {
+      "name": "Gulfstream Aerospace",
+      "location": "Savannah, GA",
+      "position": "Intern",
+      "startDate": "2016-01-01",
+      "endDate": "2016-01-05",
+      "summary": "Spring Intern for Gulfstream Aerospace working with the High Performance Computing group.",
+      "highlights": [
+        "Supported Red Had Enterprise Linux on both high performance desktops and on the supercomputer cluster",
+        "Worked directly with aerospace engineers and scientists to debug their Python applications.",
+        "Developed an methodology to securely erase and decommission hard drives that contained classified government information"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Georgia Southern University",
+      "url": "https://www.georgiasouthern.edu/",
+      "area": "Computer Science",
+      "studyType": "Bachelors",
+      "startDate": "2015-01-01",
+      "endDate": "2017-01-01",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "JS Frameworks",
+      "keywords": ["React", "Gatsby", "NextJS", "Vite", "Svelte"]
+    },
+    {
+      "name": "CSS Frameworks",
+      "keywords": ["TailwindCSS", "Material-UI", "Bootstrap", "Ant"]
+    },
+    {
+      "name": "Other Libraries",
+      "keywords": [
+        "React Router",
+        "Redux",
+        "Styled Components",
+        "Jest",
+        "React Test Renderer",
+        "Apollo",
+        "Axios"
+      ]
+    },
+    {
+      "name": "Tooling",
+      "keywords": [
+        "Typescript",
+        "Webpack",
+        "Vite",
+        "Storybook",
+        "Jest",
+        "Github Actions",
+        "CircleCI"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cloud Talent",
+      "description": "Website focused on staffing and recruiting",
+      "highlights": [
+        "Built using Gatsby 4",
+        "Frontend custom built with Styled Components",
+        "NetlifyCMS used to manage content"
+      ],
+      "startDate": "2020-03-01",
+      "current": true,
+      "url": "cloud-talent.com",
+      "type": "website"
+    },
+    {
+      "name": "TipTrack",
+      "startDate": "2019-09-01",
+      "current": true,
+      "description": "React Native app that helps servers and bartenders track their tips",
+      "url": "tiptrack.app",
+      "highlights": [
+        "Built using React Native",
+        "Uses Styled Components to style and theme UI",
+        "Redux with Redux Persist used to store and persist state",
+        "React Context API used to store state for several UI flows",
+        "Tested all analytics business logic with Jest to ensure values are calculated properly.",
+        "Integrated with FaunaDB to let users submit support requests and feedback"
+      ]
+    },
+    {
+      "name": "Awesome Devtools",
+      "description": "A tool to find libraries and devtools in the Javascript ecosystem",
+      "startDate": "2021-05-01",
+      "endDate": "2021-07-01",
+      "url": "awesomedevtools.com",
+      "highlights": [
+        "Built with Gatsby 4",
+        "Uses TailwindCSS to style elements",
+        "Uses React's Context API let users instantly search items on the page"
+      ]
+    },
+    {
+      "name": "Gistmarks",
+      "description": "Create and share bookmark collections with others using Github Gist.",
+      "startDate": "2021-02-01",
+      "endDate": "2021-09-01",
+      "url": "gistmarks.io",
+      "highlights": [
+        "React App built with Webpack",
+        "Material-UI used to style and theme components",
+        "React Router used for app routing",
+        "URL Paramaters used to enable link sharing",
+        "Uses React Context API combined with custom React hooks to store and persist data in the browser"
+      ]
+    },
+    {
+      "name": "Fav Bookmark Manager",
+      "description": "The Predecessor to Gistmarks. Built as a Chrome and Firefox extension",
+      "startDate": "2019-10-01",
+      "endDate": "2020-07-01",
+      "url": "github.com/fav-sh/extension",
+      "highlights": [
+        "React App packaged as a web extension using Parcel",
+        "State managed using Redux and persisted using Redux Persist",
+        "Created a custom storage adapter so Redux Persist would work with web extensions",
+        "UI Created with Material UI"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
