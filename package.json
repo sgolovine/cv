@@ -7,6 +7,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dayjs": "^1.10.7",
+    "gutenberg-css": "^0.6.1",
     "preact": "^10.5.15"
   },
   "devDependencies": {

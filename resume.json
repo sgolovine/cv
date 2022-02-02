@@ -20,6 +20,11 @@
         "network": "Github",
         "username": "sgolovine",
         "url": "https://github.com/sgolovine"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "SunnyGolovine",
+        "url": "https://linkedin.com/in/SunnyGolovine"
       }
     ]
   },
@@ -34,7 +39,8 @@
       "summary": "Led a number of projects for small and large clients. Built robust codebases that allowed developers to move quickly inside of, implementing new features and delivering to clients ahead of schedule",
       "highlights": [
         "Lead developer for Anthem Healthcare, one of Ascendum's largest clients",
-        "Helped develop a greenfield React application where members and caregivers can share personal stories and join online communities that supports their medical condition.",
+        "Led development for a React web app used by insurance brokers during the sales process. Primary decision maker in which 3rd party vendors to use, coding standards, and best practices. The application is now used by over 10k agents.",
+        "Led development of a React Native mobile application where users with chronic health conditions can share stories and support one another. Used new React libraries such as react-query to speed up API integration and development. The app now serves thousands of users.",
         "Provided assistance to a project developing a dashboard in React, helping build the charts and graphs using Recharts and AgGrid",
         "Provide leadership on several key projects with Anthem Healthcare, acting as a liaison between client's leadership, technical teams and our team. Managing internal bureaucratic processes so that developers could focus on writing code and delivering features",
         "Developed standards for greenfielding new React applications, providing guidance and best practices on setting up frontend codebases so teams could move faster in writing code with minimal bugs."
@@ -49,8 +55,9 @@
       "endDate": "2020-04-01",
       "summary": "Software Engineer focused on building full stack web and mobile applications using React and serverless.",
       "highlights": [
-        "Developed Cox Automotive Field Services, greenfield React Native app allowing field employees to inspect vehicles coming in for auction. Allows more accurate vehicle disclosures giving distinct business advantage over competitors",
-        "Developed an administrative panel in React for Cox Automotive Field Services, allowing supervisors in the field to remotely enable and disable features.",
+        "Developed Cox Automotive Field Services, greenfield React Native app allowing field employees to inspect vehicles coming in for auction. The app led to an increase in sales and vehicles moved across the auction block and contributed significantly to the companies earnings.",
+        "Led development of NextInspect, a \"whitelabel\" version Cox Automotive Field Service. Used styled components to theme the UI and setup build variants so both the original and whitelabel apps could be live in the same codebase.",
+        "Developed an administrative panel for Cox Automotive Field Services using React, Auth0, and SemanticUI. Allowing supervisors and managers in the field remotely administer field workers without having to contact support.",
         "Went on several ride-along's with field workers, helping identify bugs that were hard to reproduce in the lab and identified ways to improve app workflow",
         "Worked with company leadership and legal to resolve issues related to App Store approval process and worked through a number of rejections",
         "Leveraged existing knowledge and company ecosystem to develop several API's and internal company applications that automated tedious processes to make the organization more efficient in areas including: allow the editing of disclosures on the fly, streamline new employee onboarding and gain greater insight into vehicle locations."
@@ -123,8 +130,6 @@
         "React Router",
         "Redux",
         "Styled Components",
-        "Jest",
-        "React Test Renderer",
         "Apollo",
         "Axios"
       ]
