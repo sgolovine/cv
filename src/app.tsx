@@ -1,5 +1,10 @@
-import resumeData from "../resume.json";
-import { formatDate, formatUrl } from "./helpers";
+import resumeData from "../resume.json"
+import { ItemHeader } from "./components/ItemHeader"
+import { ItemList } from "./components/ItemList"
+import { SectionContainer } from "./components/SectionContainer"
+import { SectionHeader } from "./components/SectionHeader"
+import { SkillsSection } from "./components/SkillsSection"
+import { formatDate, formatDateRange, formatUrl } from "./helpers"
 
 export function App() {
   return (
@@ -51,7 +56,7 @@ export function App() {
           </tr>
         </td>
         <td className="pl-6">
-          {resumeData.basics.profiles.map((profile) => {
+          {resumeData.basics.profiles.map(profile => {
             return (
               <tr>
                 <td className="pr-2">
@@ -66,7 +71,7 @@ export function App() {
                   </a>
                 </td>
               </tr>
-            );
+            )
           })}
         </td>
       </table>
@@ -74,109 +79,61 @@ export function App() {
       {/* Introduction */}
       <p className="print:text-sm">{resumeData.basics.summary}</p>
 
-      <div className="py-4 print:py-2">
-        {/* Skills */}
-        <h2 className="text-xl print:text-lg font-bold">Skills</h2>
-        <table>
-          {resumeData.skills.map((skill) => {
-            return (
-              <tr>
-                <td>
-                  <div className="py-4 print:py-2">
-                    <p className="text-sm font-bold w-32">{skill.name}</p>
-                  </div>
-                </td>
-                <td className="px-4">
-                  <p className="text-sm text-gray-800">
-                    {skill.keywords.join(" / ")}
-                  </p>
-                </td>
-              </tr>
-            );
-          })}
-        </table>
-      </div>
+      <SkillsSection header="Skills" skills={resumeData.skills} />
 
-      <div className="py-4 print:py-2">
-        {/* Work */}
-        <h2 className="text-xl print:text-lg font-bold py-2">Work</h2>
-        {resumeData.work.map((item) => (
-          <div>
-            <p>
-              <span className="text-lg print:text-md font-bold">
-                {item.position}
-              </span>{" "}
-              -{" "}
-              <span className="text-sm text-gray-800 font-medium">
-                {item.name}
-              </span>
-            </p>
-            <p className="text-sm text-blue-700 font-bold">
-              {formatDate(item.startDate)} -{" "}
-              {item.current ? "Present" : formatDate(item.endDate)}
-            </p>
-            {/* <p>{item.summary}</p> */}
-            <ul className="px-6 py-4">
-              {item.highlights.map((highlight) => {
-                return (
-                  <li className="list-disc pb-2 print:pb-0 text-sm text-gray-800 avoid-break-inside">
-                    {highlight}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+      {/* Work */}
+      <SectionContainer>
+        <SectionHeader>Work</SectionHeader>
+        {resumeData.work.map(item => (
+          <>
+            <ItemHeader
+              header={item.position}
+              headerRight={item.name}
+              subheader={formatDateRange(
+                item.startDate,
+                item.endDate,
+                item.current
+              )}
+            />
+            <ItemList data={item.highlights} keyNamespace="work" />
+          </>
         ))}
-      </div>
+      </SectionContainer>
 
-      <div className="py-4 print:py-2">
-        {/* Projects */}
-        <h2 className="text-xl print:text-lg font-bold py-2">Side Projects</h2>
-        {resumeData.projects.map((item) => {
+      {/* Projects */}
+      <SectionContainer>
+        <SectionHeader>Side Projects</SectionHeader>
+        {resumeData.projects.map(item => {
           return (
-            <div>
-              <p className="text-lg print:text-md font-bold">{item.name}</p>
-              <p className="text-sm text-blue-700 font-bold">
-                {formatDate(item.startDate)} -{" "}
-                {item.current ? "Present" : formatDate(item.endDate)}
-              </p>
+            <>
+              <ItemHeader
+                header={item.name}
+                subheader={formatDateRange(
+                  item.startDate,
+                  item.endDate,
+                  item.current
+                )}
+              />
               <p className="print:text-sm">{item.description}</p>
-              <ul className="px-6 py-4">
-                {item.highlights.map((highlight) => {
-                  return (
-                    <li className="list-disc pb-2 print:pb-0 text-sm text-gray-800">
-                      {highlight}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          );
+              <ItemList data={item.highlights} keyNamespace="side-projects" />
+            </>
+          )
         })}
-      </div>
+      </SectionContainer>
 
-      <div className="py-4 print:py-2">
-        {/* Education */}
-        <h2 className="text-xl print:text-lg font-bold py-2">Education</h2>
-        {resumeData.education.map((item) => {
+      {/* Education */}
+      <SectionContainer>
+        <SectionHeader>Education</SectionHeader>
+        {resumeData.education.map(item => {
           return (
-            <div>
-              <p>
-                <span className="text-lg print:text-md font-bold">
-                  {item.institution}
-                </span>{" "}
-                -{" "}
-                <span className="text-sm text-gray-800 font-medium">
-                  {item.studyType} in {item.area}
-                </span>
-              </p>
-              <p className="text-sm text-blue-700 font-bold">
-                Graduated {formatDate(item.endDate)}
-              </p>
-            </div>
-          );
+            <ItemHeader
+              header={item.institution}
+              headerRight={`${item.studyType} in ${item.area}`}
+              subheader={`Graduated ${formatDate(item.endDate)}`}
+            />
+          )
         })}
-      </div>
+      </SectionContainer>
     </div>
-  );
+  )
 }
