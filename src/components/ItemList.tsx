@@ -1,7 +1,7 @@
 interface Props {
   // Key namespace for list keys
   // So we don't get any name collisions
-  keyNamespace?: string
+  keyNamespace: string
   data: string[]
 }
 

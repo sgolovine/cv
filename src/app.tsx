@@ -1,80 +1,26 @@
-import resumeData from "../resume.json"
-import { ItemHeader } from "./components/ItemHeader"
-import { ItemList } from "./components/ItemList"
-import { SectionContainer } from "./components/SectionContainer"
-import { SectionHeader } from "./components/SectionHeader"
-import { SkillsSection } from "./components/SkillsSection"
-import { formatDate, formatDateRange, formatUrl } from "./helpers"
+// import resumeData from "../resume.json"
+import resumeData from "@data/resume.json"
+import {
+  Header,
+  ItemHeader,
+  ItemList,
+  SectionContainer,
+  SectionHeader,
+  SkillsSection,
+} from "~/components"
+import { formatDate, formatDateRange } from "~/helpers"
 
 export function App() {
   return (
     <div className="max-w-2xl print:max-w-full print:p-0 p-4">
       {/* Header */}
-      <h1 className="text-2xl print:text-xl font-bold">
-        {resumeData.basics.name}
-      </h1>
-      <table className="my-2">
-        <td className="pr-6">
-          <tr>
-            <td className="pr-2">
-              <p className="text-sm font-bold">Website</p>
-            </td>
-            <td>
-              <a
-                className="text-sm text-blue-600 font-bold hover:underline"
-                href={resumeData.basics.url}
-              >
-                {formatUrl(resumeData.basics.url)}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td className="pr-2">
-              <p className="text-sm font-bold">Email</p>
-            </td>
-            <td>
-              <a
-                className="text-sm text-blue-600 font-bold hover:underline"
-                href={`mailto:${resumeData.basics.url}`}
-              >
-                {resumeData.basics.email}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td className="pr-2">
-              <p className="text-sm font-bold">Phone</p>
-            </td>
-            <td>
-              <a
-                href={`tel:${resumeData.basics.phone}`}
-                className="text-sm text-blue-600 font-bold hover:underline"
-              >
-                {resumeData.basics.phone}
-              </a>
-            </td>
-          </tr>
-        </td>
-        <td className="pl-6">
-          {resumeData.basics.profiles.map(profile => {
-            return (
-              <tr>
-                <td className="pr-2">
-                  <p className="text-sm font-bold">{profile.network}</p>
-                </td>
-                <td>
-                  <a
-                    className="text-sm text-blue-600 font-bold hover:underline"
-                    href={profile.url}
-                  >
-                    {formatUrl(profile.url)}
-                  </a>
-                </td>
-              </tr>
-            )
-          })}
-        </td>
-      </table>
+      <Header
+        name={resumeData.basics.name}
+        url={resumeData.basics.url}
+        email={resumeData.basics.email}
+        phone={resumeData.basics.phone}
+        profiles={resumeData.basics.profiles}
+      />
 
       {/* Introduction */}
       <p className="print:text-sm">{resumeData.basics.summary}</p>
